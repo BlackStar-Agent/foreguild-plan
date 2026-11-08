@@ -1,0 +1,68 @@
+{
+  "_meta": {
+    "what": "Machine-readable copy of the data appendix (Section 8) of the Foreguild operating plan, poidh base/1531 claim 9457.",
+    "snapshotDates": "2026-11-05/07 (as stated in the plan)",
+    "transcribedToJSON": "2026-11-08",
+    "howToReproduce": "Run scripts/fetch_poidh_board.py and scripts/fetch_seer_markets.py. A re-run produces a NEW snapshot of living boards/APIs: different numbers are expected and honest. Differences between this file and a re-run are board evolution, not inconsistency.",
+    "labels": {
+      "MEASURED": "observed directly from the public page/API during 2026-11-05/07",
+      "REPORTED": "figure displayed by the platform at capture time (not independently auditable afterwards)"
+    }
+  },
+  "poidhBaseBoard": {
+    "source": "https://poidh.xyz/base/bounties (per-bounty data: /base/bounty/{id}/data)",
+    "measuredOn": "2026-11-05/07",
+    "label": "MEASURED",
+    "openBountiesEnumerated": 19,
+    "rewardUsdSample": [2.23, 2.23, 2.23, 2.23, 5.56, 9.54, 9.54, 18.25, 27.38],
+    "topBountyUsdEquivalent": 1112.96,
+    "topBountyNote": "the 0.5 ETH contest bounty (base/1531)",
+    "medianOpenBountyUsd": 9.54,
+    "rewardRangeUsd": [2.23, 1112.96],
+    "claimsPerBountyRange": [2, 388],
+    "claimsMedianOnCompetitiveBounties": 30,
+    "topBountyClaimsAtCapture": 36,
+    "topBountyTransactionsAtCapture": 37
+  },
+  "cantina": {
+    "source": "https://cantina.xyz/opportunities",
+    "measuredOn": "2026-11-05/07",
+    "label": "REPORTED",
+    "liveOpportunities": 52,
+    "payoutsDisplayedUsd": 58900000,
+    "payoutsDisplayedNote": "\"$58.9M payouts available\" as displayed on the page",
+    "frictionObserved": "most opportunities require deposits (anti-agent-LLM-spam measure); the Coinbase bounty was KYC-gated"
+  },
+  "immunefi": {
+    "source": "https://immunefi.com",
+    "measuredOn": "2026-11-05/07",
+    "label": "MEASURED",
+    "activePrograms": 155,
+    "kycFilterPresent": true,
+    "loggedOutView": "triaged subset visible without an account"
+  },
+  "superteamEarn": {
+    "source": "https://earn.superteam.fun/api/listings/?filter=bounty",
+    "measuredOn": "2026-11-05/07",
+    "label": "MEASURED",
+    "openBounties": 10,
+    "agentAllowed": 1,
+    "agentAllowedRewardUsd": 125,
+    "humanOnly": 9
+  },
+  "codeBountyPlatforms": {
+    "measuredOn": "2026-11-05/07",
+    "label": "MEASURED",
+    "algora": "pivoted to recruiting; bounties page 404",
+    "polar": "pivoted to AI billing; issues page 404",
+    "implication": "the agent-native job-board gap the plan targets was real at capture time"
+  },
+  "seerContestMarket": {
+    "source": "Seer market for poidh base/1531",
+    "measuredOn": "2026-11-05 (day 1 of the contest)",
+    "label": "MEASURED",
+    "bountyEth": 0.5,
+    "transactionsDay1": 37,
+    "usedAsAnchorFor": "plan Section 2.3 market-made futarchy engine; v2 Section C risk 2 (thin-market fallback)"
+  }
+}
